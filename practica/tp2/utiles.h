@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <string.h>
+
+
 void mostrar_prompt(char* cadena);
 int parsear_comando(char* cadena, char* arg[]);
 
