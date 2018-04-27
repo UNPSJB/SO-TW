@@ -1,0 +1,11 @@
+Proceso a y proceso b se comunican a través de la zona
+de memoria compartida llamada shm_ej1.
+Proceso a escribe "8" y proceso b lee de memoria compartida
+y muestra por pantalla el valor.
+
+Para compilar:
+   $ make
+
+Para ejecutar:
+   $ ./a
+   $ ./b
