@@ -1,10 +1,9 @@
-all: cliente servidor
+all: client server
 
-cliente: cliente.c
-	gcc cliente.c -o cliente
+client: client.c
+	gcc client.c -o client
 
-servidor: servidor.c
-	gcc servidor.c -o servidor
-
+server: server.c
+	gcc server.c -o server
 clean:
-	rm cliente servidor
+	rm client server
