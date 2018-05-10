@@ -41,7 +41,7 @@ int main(void)
 		write(socket_fd, buffer, nbytes);
 
 		nbytes = read(socket_fd, buffer, 256);
-		buffer[nbytes] = 0;
+		buffer[nbytes] = '\0';
 		printf("%s\n", buffer);
 	}
 

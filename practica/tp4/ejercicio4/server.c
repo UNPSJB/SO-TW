@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
+#include <ctype.h>
 
 #undef max
 #define max(x,y) ((x) > (y) ? (x) : (y))
@@ -16,12 +17,12 @@ int connection_handler(int sfd)
 	char buffer[256];
 
 	nbytes = read(sfd, buffer, 256);
-	buffer[nbytes] = 0;
+	buffer[nbytes] = '\0';
 	printf("Mensaje del cliente: %s\n", buffer);
 
 	for(i = 0; i < nbytes; ++i)
 		buffer[i] = toupper(buffer[i]);
-	buffer[nbytes] = 0;
+	buffer[nbytes] = '\0';
 
 	write(sfd, buffer, nbytes);
 	return 0;
