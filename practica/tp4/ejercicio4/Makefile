@@ -1,9 +1,9 @@
-all: client server
+CPPFLAGS = -g -I.
 
-client: client.c
-	gcc client.c -o client
+all: servidor
 
-server: server.c
-	gcc server.c -o server
+servidor: servidor.c
+	cc $(CPPFLAGS) servidor.c -o servidor
+
 clean:
-	rm client server
+	rm -rf servidor
