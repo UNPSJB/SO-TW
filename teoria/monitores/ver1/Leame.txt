@@ -1,0 +1,29 @@
+Ejemplo de Monitores en Java.
+
+En este ejemplo puede verse que cuando los métodos de una clase no se definen
+como sincronizados (sinchronized) pueden presentarse condiciones de competencia
+entre hilos que invocan a un mismo método. Precisamente, el modificador
+sinchronized asegura que el acceso y ejecución del método será exclusivo para
+un solo hilo a la vez. En otras palabras, podemos ver el cuerpo completo del
+método como una región crítica a la cual distintos hilos acceden con exclusión
+mutua garantizada.
+
+Para compilar:
+
+javac *.java
+
+Para ejecutar:
+
+java Mon
+
+Probar de sacar o agregar sinchronized del método incIndice() de la clase Mon,
+recompilar en cada caso y ejecutar para ver los resultados. Cuando el método se
+declara como sinchronized, el índice siempre queda con un valor final de 2000000.
+En cambio cuando el método no es sincronizado, el indice queda en general con
+valores menores a 2000000 (probar de ejecutar varias veces). Se pierden incrementos.
+
+El while sobre temp2 es solo para consumir tiempo de procesamiento a fin de que sea
+evidente el problema de competencia.
+
+Sistemas Operativos.
+
