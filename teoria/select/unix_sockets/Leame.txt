@@ -1,0 +1,18 @@
+ 
+Compilar con:
+
+make
+
+Esto generará los archivos ejecutables, server y client.
+Ejecutar ./server en una terminal y en otras dos terminales ejecutar ./client
+
+Este servidor pasa a mayúsculas un string que recibe de un cliente y se lo devuelve (en mayúsculas) por el mismo socket.
+El cliente espera un texto del usuario (por teclado) y cuando el usuario presiona <Enter> envía el string al servidor (sin el /n final).
+Luego vuelve a esperar otro texto del teclado y así indefinidamente.
+
+El servidor atiende a varios clientes pero en forma secuencial. Cuando el primer cliente se desconecta, recién atiende la conexión del segundo cliente.
+
+
+Marcelo Gómez
+Sistemas Operativos 2013
+Mayo de 2013.-
