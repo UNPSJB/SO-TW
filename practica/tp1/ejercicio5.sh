@@ -6,8 +6,6 @@ if [ $# -gt 0 ]; then
 		echo "Forma de uso: $0 [-h]"
 		exit 1
 	fi
-	echo "Texto explicativo."
-	exit 0
 
 	for i in *
 	do
