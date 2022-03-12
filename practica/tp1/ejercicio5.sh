@@ -11,7 +11,7 @@ if [ $# -gt 0 ]; then
 	do
 		lfn=`echo $i | gawk ' {str = tolower($0);print str }'`
 		if [ $lfn != $i ]; then
-				mv $i $lfn
+			mv $i $lfn
 		fi
 	done
 else
