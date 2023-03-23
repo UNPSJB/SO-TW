@@ -10,11 +10,13 @@ if [ "$1" = "-" ]
 	then
 		for i in *
 		do
-			grep "$2" $i #> /dev/null || echo $i
+            echo "1 for"
+			grep "$2" $i > /dev/null || echo $i
 		done
 	else
 		for i in *
 		do
-			grep "$1" $i #> /dev/null && echo $i
+            echo "2 for"
+			grep "$1" $i > /dev/null && echo $i
 		done
 fi

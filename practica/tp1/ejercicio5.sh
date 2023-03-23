@@ -5,7 +5,11 @@ if [ $# -gt 0 ]; then
 	if [ $# -ne 1 -o $1 != "-h" ]; then
 		echo "Forma de uso: $0 [-h]"
 		exit 1
-	fi
+	fi 
+
+	if [ $# -eq 1 -a $1 == "-h" ]; then
+        echo "Este programa sirve para ..."
+    fi
 
 	for i in *
 	do
