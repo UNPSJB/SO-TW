@@ -8,23 +8,21 @@
 BINARY=programa
 OBJ = main.o salida.o calculadora.o
 LIBS= funciones.h
-FLAGS= -g -Wall
 
 #expansion de variables definidas:
-#con variables de entorno para referenciar al compilador:
 all: $(BINARY)
 
 programa: $(OBJ)
-	$(CC) -o $(BINARY) $(OBJ)
+	gcc -o $(BINARY) $(OBJ)
 
 main.o: main.c $(LIBS) 
-	$(CC) -c $(FLAGS) main.c
+	gcc -c main.c
 
 salida.o: salida.c $(LIBS)
-	$(CC) -c $(FLAGS) salida.c
+	gcc -c salida.c
 
 calculadora.o: calculadora.c $(LIBS)
-	$(CC) -c $(FLAGS) calculadora.c
+	gcc -c calculadora.c
 
 clean:
 	rm -rf $(BINARY) $(OBJ)
